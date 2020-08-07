@@ -1,0 +1,22 @@
+{
+  "name": "frontendavanzado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeoTRAN001/FrontendAvanzado.git"
+  },
+  "author": "NeoTRAN001",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeoTRAN001/FrontendAvanzado/issues"
+  },
+  "homepage": "https://github.com/NeoTRAN001/FrontendAvanzado#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1"
+  }
+}
