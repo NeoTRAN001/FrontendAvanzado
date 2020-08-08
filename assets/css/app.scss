@@ -1,3 +1,48 @@
+@import './modules/_variables';
+
 body {
-    
+    background-color: $white;
+}
+
+img {
+    max-width: 100%;
+}
+
+.grid {
+    display: grid; /* Se coloca o se mueve con el layout grid*/
+    grid-template-columns: repeat(12, 1fr); /* Crear un template de 12 columns */
+}
+
+.main-text {
+    grid-area: title;
+}
+
+.main-image {
+    grid-area: image;
+}
+
+.grid-main-area {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: 
+        "title title title title title title title title title"
+        "image image image image image image image image image";
+}
+
+.container {
+    grid-column: span 12;
+    padding: $big-padding;
+}
+
+@media (min-width: 960px) {
+    .container {
+        grid-column: 2 / 12;
+    }
+
+    .grid-main-area {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-areas: 
+            "title title title image image image image image image";
+    }
 }
