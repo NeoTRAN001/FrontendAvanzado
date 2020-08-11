@@ -110,6 +110,39 @@ figure {
     }
 }
 
+.slider {
+    header {
+        background-color: $blue;
+        color: $white;
+        padding: $big-padding;
+        transform: translateY(40px);
+        width: 90%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        margin: 0 auto;
+
+        h2 {
+            margin: 0px;
+        }
+
+        .separator {
+            text-align: right;
+            padding-right: 150px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                height: 3px;
+                width: 140px;
+                background-color: currentColor; /* Hace referencia al color actual del elemento padre*/
+                top: 0.7em;
+                right: 0px;
+            }
+        }
+    }
+}
+
 .mission {
     align-items: center;
     font-size: 1.1em;
@@ -119,6 +152,7 @@ figure {
 
         figure {
             float: right;
+            margin-left: 20px;
         }
 
         p {
@@ -133,12 +167,29 @@ figure {
                     background-color: $blue;
                     position: absolute;
                     bottom: -1.5em;
-                    height: 8px;
+                    height: 5px;
                     width: 80%;
                     z-index: -1;
                 }
             }
         }
+    }
+}
+
+.social {
+    margin-top: $big-margin-top;
+    margin-bottom: $big-margin-top;
+    @include text-center;
+    
+    p.title {
+        font-weight: 200;
+        font-size: 2.5em;
+    }
+
+    a {
+        display: block;
+        max-width: 150px;
+        margin: 1em auto;
     }
 }
 
@@ -152,5 +203,32 @@ figure {
         grid-template-columns: repeat(10, 1fr);
         grid-template-areas: 
             "title title title . image image image image image image";
+    }
+
+    .slider {
+        align-items: center;
+        
+        header {
+            transform: translateX(180px);
+            width: 100%;
+            min-width: 350px;
+        }
+
+        .image {
+            transform: translateX(-50px);
+            z-index: -1;
+        }
+    }
+
+    .social {
+        a {
+            display: inline-block;
+            margin-top: 0px;
+            margin-right: 90px;
+
+            &:last-of-type {
+                margin-right: 0px;
+            }
+        }
     }
 }
