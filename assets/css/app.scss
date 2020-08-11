@@ -209,13 +209,13 @@ figure {
         align-items: center;
         
         header {
-            transform: translateX(180px);
+            transform: translateX(120px);
             width: 100%;
             min-width: 350px;
         }
 
         .image {
-            transform: translateX(-50px);
+            transform: translateX(-70px);
             z-index: -1;
         }
     }
