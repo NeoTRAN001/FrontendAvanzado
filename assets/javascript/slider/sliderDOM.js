@@ -4,19 +4,20 @@ let sliderText     = document.querySelector("#slider-text");
 let sliderTitle    = document.querySelector("#slider-title");
 let sliderSubTitle = document.querySelector("#slider-subtitle");
 let sliderImage    = document.querySelector("#slider-image");
+let textContent    = document.querySelector("#slider-text-content");
 
 let slider = new Slider({
     elements: [
         {
             title: 'Lorem Ipsum',
             subtitle: 'Ipsum',
-            image: 'https://farm6.static.flickr.com/5547/11015071284_0d542ccf71_c.jpg',
+            image: './public/images/c.jpg',
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate'
         },
         {
             title: 'Lorem 2',
             subtitle: 'Ipsum 2',
-            image: 'https://farm7.static.flickr.com/6103/6263655041_5711f51edc_c.jpg',
+            image: './public/images/3.jpg',
             text: '2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate'
         },
         {
@@ -27,10 +28,18 @@ let slider = new Slider({
         }
     ],
     animationFunc: function (element) {
-        sliderTitle.innerHTML    = element.title;
-        sliderSubTitle.innerHTML = element.subtitle;
-        sliderText.innerHTML     = element.text;
-        sliderImage.src          = element.image;
+        textContent.classList.add("hide");
+        sliderImage.classList.add("hide");
+
+        setTimeout(function() {
+            sliderTitle.innerHTML    = element.title;
+            sliderSubTitle.innerHTML = element.subtitle;
+            sliderText.innerHTML     = element.text;
+            sliderImage.src          = element.image;
+
+            textContent.classList.remove("hide");
+            sliderImage.classList.remove("hide");
+        }, 600);
     },
     speed: 5000
 });
