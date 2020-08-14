@@ -6,6 +6,8 @@ let sliderTitle    = document.querySelector("#slider-title");
 let sliderSubTitle = document.querySelector("#slider-subtitle");
 let sliderImage    = document.querySelector("#slider-image");
 let textContent    = document.querySelector("#slider-text-content");
+let leftArrow      = document.querySelector(".left-arrow");
+let rightArrow     = document.querySelector(".right-arrow");
 
 let slider = new Slider({
     elements: elements,
@@ -27,3 +29,6 @@ let slider = new Slider({
 });
 
 slider.play();
+
+leftArrow.addEventListener('click' , slider.prev);
+rightArrow.addEventListener('click', slider.next);
